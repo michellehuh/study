@@ -63,6 +63,7 @@ public class Test1 {
 			return;
 		
 		String str = "-----: ";
+		String str2 = "input branch test";
 		for (int i=0, n=list.size(); i<n; i++)
 		{
 			str += list.get(i);
