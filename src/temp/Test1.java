@@ -62,7 +62,7 @@ public class Test1 {
 		if(list.size()==0)
 			return;
 		
-		String str = "���� �����: ";
+		String str = "-----: ";
 		for (int i=0, n=list.size(); i<n; i++)
 		{
 			str += list.get(i);
