@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class MyArrayPrinter {
 	
 	public static void print(ArrayList<String> list){
+		
+		// feature output test
 		if(list.size()==0)
 		{	
 			System.out.println("남은 사람 없음");
