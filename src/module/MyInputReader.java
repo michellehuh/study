@@ -2,7 +2,7 @@ package module;
 
 import java.util.Scanner;
 
-public class MyReader {
+public class MyInputReader {
 	
 	private Scanner sc = new Scanner(System.in);
 	
@@ -11,7 +11,7 @@ public class MyReader {
 		
 		while(true)
 		{
-			System.out.print(var+" 입력: ");
+			System.out.print(var+": ");
 			if(sc.hasNextInt())
 			{
 				result = sc.nextInt();
@@ -24,7 +24,7 @@ public class MyReader {
 	
 	public String readString(String var){
 		
-		System.out.print(var+" 입력: ");
+		System.out.print(var+": ");
 		String result = sc.next();
 		
 		return result;
