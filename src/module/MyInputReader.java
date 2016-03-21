@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class MyInputReader {
 	
-	private Scanner sc = new Scanner(System.in);
+	private static Scanner sc = new Scanner(System.in);
 	
-	public int readInt(String var){
+	public static int readInt(String var){
 		int result = 0;
 		
 		while(true)
@@ -22,7 +22,7 @@ public class MyInputReader {
 		return result;
 	}
 	
-	public String readString(String var){
+	public static String readString(String var){
 		
 		System.out.print(var+": ");
 		String result = sc.next();
