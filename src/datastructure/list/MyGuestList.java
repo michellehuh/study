@@ -17,20 +17,15 @@ public class MyGuestList implements MyListInterface{
 	}
 
 	@Override
-	public void add(Guest guest) 
+	public void add(Guest guest) throws Exception
 	{
-		guestList[waitQueue++] = guest;
-		currentWaitList();
+		System.out.println((guestList[waitQueue++] = guest).getName()+" added");;
 	}
 
 	@Override
-	public void process()
+	public void process() throws Exception
 	{
-		if (hasNextGuest())
-		{
 			System.out.println(guestList[processQueue++].getName()+" done");
-			currentWaitList();
-		}
 	}
 	
 	public boolean hasNextGuest()
@@ -48,16 +43,16 @@ public class MyGuestList implements MyListInterface{
 		return waitQueue-processQueue;
 	}
 	
-	public void currentWaitList()
+	public void printCurrentWaitList()
 	{
+		System.out.print("names: { ");
 		for (int i=processQueue; i<waitQueue; i++)
 		{
-			System.out.print(guestList[i].getName());
+			System.out.print("\""+guestList[i].getName()+"\"");
 			
 			if (i<(waitQueue-1))
 				System.out.print(", ");
-			else
-				System.out.println("\n");
 		}
+		System.out.println(" }\n");
 	}
 }

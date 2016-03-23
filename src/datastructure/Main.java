@@ -8,14 +8,27 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
-		MyGuestList myGuestList = new MyGuestList(new MyInputReader().readInt("max no of guests "));
+		MyGuestList myGuestList = new MyGuestList(MyInputReader.readInt("max no of guests "));
 		
 		while(myGuestList.hasEmptySlot())
-			myGuestList.add(new Guest(new MyInputReader().readString("name ")));
+		{
+			try 
+			{
+				myGuestList.add(new Guest(MyInputReader.readString("name ")));
+			} 
+			catch (Exception e) {e.printStackTrace();}
+			myGuestList.printCurrentWaitList();
+		}
 		
 		while(myGuestList.hasNextGuest())
-			myGuestList.process();
-		
+		{
+			try 
+			{
+				myGuestList.process();
+			} 
+			catch (Exception e) {e.printStackTrace();}
+			myGuestList.printCurrentWaitList();
+		}
 	}
 
 }
