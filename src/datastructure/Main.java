@@ -4,7 +4,8 @@ import datastructure.list.MyGuestList;
 import datastructure.model.Guest;
 import module.MyInputReader;
 
-public class Main {
+public class Main 
+{
 
 	public static void main(String[] args) 
 	{

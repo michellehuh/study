@@ -1,6 +1,7 @@
 package datastructure.model;
 
-public class Guest {
+public class Guest 
+{
 	
 	private String name;
 

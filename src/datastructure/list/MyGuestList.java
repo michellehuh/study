@@ -2,7 +2,8 @@ package datastructure.list;
 
 import datastructure.model.Guest;
 
-public class MyGuestList implements MyListInterface{
+public class MyGuestList implements MyListInterface
+{
 	
 	private Guest[] guestList;
 	private int MAX_GUEST;
@@ -49,9 +50,7 @@ public class MyGuestList implements MyListInterface{
 		for (int i=processQueue; i<waitQueue; i++)
 		{
 			System.out.print("\""+guestList[i].getName()+"\"");
-			
-			if (i<(waitQueue-1))
-				System.out.print(", ");
+			System.out.print( i < (waitQueue-1) ? ", " : "");
 		}
 		System.out.println(" }\n");
 	}

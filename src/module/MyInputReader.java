@@ -2,7 +2,8 @@ package module;
 
 import java.util.Scanner;
 
-public class MyInputReader {
+public class MyInputReader 
+{
 	
 	private static Scanner sc = new Scanner(System.in);
 	
