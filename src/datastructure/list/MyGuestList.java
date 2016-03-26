@@ -20,13 +20,13 @@ public class MyGuestList implements MyListInterface
 	@Override
 	public void add(Guest guest) throws Exception
 	{
-		System.out.println((guestList[waitQueue++] = guest).getName()+" added");;
+		System.out.println((guestList[waitQueue++] = guest).getName()+" added");
 	}
 
 	@Override
 	public void process() throws Exception
 	{
-			System.out.println(guestList[processQueue++].getName()+" done");
+		System.out.println(guestList[processQueue++].getName()+" done");
 	}
 	
 	public boolean hasNextGuest()
